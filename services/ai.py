@@ -1,4 +1,5 @@
 import openai
+from typing import List
 from config import Config
 
 client = openai.OpenAI(
@@ -36,7 +37,7 @@ def ai_request(content: str) -> str:
 
     return ''
 
-def get_advice(weather: dict) -> list[str]:
+def get_advice(weather: dict) -> List[str]:
     advices = []
 
     location = weather['location']['name']
